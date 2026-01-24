@@ -6,18 +6,22 @@ vim.cmd("set softtabstop=2")
 vim.cmd("set shiftwidth=2")
 vim.cmd("set autoindent")    -- mantém indent da linha anterior
 vim.cmd("set smartindent")   -- indent inteligente para C-like
+vim.cmd("set spell")
+vim.cmd("set spelllang=pt_br,en")
+vim.keymap.set('n', '<Esc>', ':noh<CR>', { silent = true })  -- Esc limpa highlight
+
 
 -- Auto-indenta ao salvar
 vim.api.nvim_create_autocmd("BufWritePre", {
-	pattern = { 
-		"*.js", "*.ts", "*.lua", "*.cs", "*.md", "*.tex", 
-		"*.conf", "*.php", "*.py", "*.css", "*.yaml", "*.yml", 
-		"*.json", "*.sh", "*.c", "*.h", "Dockerfile", "*.html", 
-		"*.mermaid", "*.jsx", "*.tsx"
-	},
-	callback = function()
-		local cursor_pos = vim.api.nvim_win_get_cursor(0)
-		vim.cmd("normal! gg=G")  -- indenta tudo e volta pro cursor
-		vim.api.nvim_win_set_cursor(0, cursor_pos)
-	end,
+  pattern = {
+    "*.js", "*.ts", "*.lua", "*.cs", "*.md", "*.tex",
+    "*.conf", "*.php", "*.py", "*.css", "*.yaml", "*.yml",
+    "*.json", "*.sh", "*.c", "*.h", "Dockerfile", "*.html",
+    "*.mermaid", "*.jsx", "*.tsx"
+  },
+  callback = function()
+    local cursor_pos = vim.api.nvim_win_get_cursor(0)
+    vim.cmd("normal! gg=G")  -- indenta tudo e volta pro cursor
+    vim.api.nvim_win_set_cursor(0, cursor_pos)
+  end,
 })
