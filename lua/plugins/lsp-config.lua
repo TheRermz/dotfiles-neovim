@@ -69,7 +69,17 @@ return{
 
       -- LaTeX
       vim.lsp.config('ltex', {})
-      vim.lsp.config('ltex_plus', {})
+      vim.lsp.config('ltex_plus', {
+        settings = {
+          ltex = {
+            language = "pt-BR",
+            enabled = { "markdown", "tex", "latex", "text" },
+            dictionary = {
+              ["pt-BR"] = { "neovim", "treesitter", "lspconfig" }
+            }
+          }
+        }
+      })
       vim.lsp.config('texlab', {})
 
       -- Markdown
