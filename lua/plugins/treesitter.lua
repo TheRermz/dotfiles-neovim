@@ -13,7 +13,7 @@ return   {
       'javascript', 'typescript', 'lua', 'c_sharp', 'markdown',
       'latex', 'nginx', 'php', 'python', 'css', 'yaml', 'json',
       'bash', 'c', 'dockerfile', 'html', 'mermaid'
-    }):wait(300000)  -- espera até 5 minutos
+    })
 
     -- Highlight automático
     vim.api.nvim_create_autocmd('FileType', {
