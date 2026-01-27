@@ -13,13 +13,13 @@ return   {
       'javascript', 'typescript', 'lua', 'c_sharp', 'markdown',
       'latex', 'nginx', 'php', 'python', 'css', 'yaml', 'json',
       'bash', 'c', 'dockerfile', 'html', 'mermaid'
-    })
+    }):wait(300000)
 
     -- Highlight automático
     vim.api.nvim_create_autocmd('FileType', {
       pattern = {
         'javascript', 'typescript', 'lua', 'c_sharp', 'markdown', 'tex',
-        'nginx', 'php', 'py', 'css', 'yaml', 'json', 'sh', 'c',
+        'nginx', 'php', 'py', 'css', 'yaml', 'yml', 'json', 'sh', 'c',
         'dockerfile', 'html', 'mermaid'
       },
       callback = function()

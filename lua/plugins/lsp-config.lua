@@ -72,10 +72,11 @@ return{
       vim.lsp.config('ltex_plus', {
         settings = {
           ltex = {
-            language = "pt-BR",
+            language = {"pt-BR", "en-US"},
             enabled = { "markdown", "tex", "latex", "text" },
             dictionary = {
-              ["pt-BR"] = { "neovim", "treesitter", "lspconfig" }
+              ["pt-BR"] = { "neovim", "treesitter", "lspconfig" },
+              ["en-US"] = { "Neovim", "TypeScript", "JavaScript" }
             }
           }
         }
@@ -102,7 +103,7 @@ return{
       -- Keybinds
       vim.keymap.set('n', 'K', vim.lsp.buf.hover, {})
       vim.keymap.set('n', 'gd', vim.lsp.buf.definition, {})
-      vim.keymap.set({ 'n', 'v' }, '<leader>ca', vim.lsp.buf.code_action, {})
+      vim.keymap.set('n', '<leader>ca', vim.lsp.buf.code_action, {})
     end
   }
 }
