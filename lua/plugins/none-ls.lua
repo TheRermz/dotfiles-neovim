@@ -7,10 +7,10 @@ return {
         null_ls.builtins.formatting.stylua,
         null_ls.builtins.formatting.prettier.with({
           extra_args = {
-            "--single-quote=false",  -- aspas duplas
-            "--semi=true",           -- ponto e vírgula
-            "--trailing-comma=es5",  -- vírgulas finais
-          }
+            "--single-quote=false", -- aspas duplas
+            "--semi=true", -- ponto e vírgula
+            "--trailing-comma=es5", -- vírgulas finais
+          },
         }),
         null_ls.builtins.formatting.black,
         null_ls.builtins.diagnostics.eslint_d,
@@ -19,7 +19,20 @@ return {
     })
 
     vim.api.nvim_create_autocmd("BufWritePre", {
-      pattern = { "*.js", "*.ts", "*.jsx", "*.tsx", "*.json", "*.css", "*.html", "*.yaml" },
+      pattern = {
+        "*.js",
+        "*.ts",
+        "*.jsx",
+        "*.tsx",
+        "*.json",
+        "*.css",
+        "*.html",
+        "*.yaml",
+        "*.lua",
+        "*.yml",
+        "*.md",
+        "*.tex",
+      },
       callback = function()
         vim.lsp.buf.format({ async = false })
       end,
