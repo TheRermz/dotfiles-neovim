@@ -1,4 +1,4 @@
-# Configuração Neovim
+#9 Configuração Neovim
 
 Minha configuração pessoal do Neovim, ainda em desenvolvimento.
 
@@ -52,27 +52,27 @@ Seguindo a série **Neovim for Newbs** do TypeCraft:
 
 ## Plugins
 
-| Plugin | Descrição |
-|--------|-----------|
-| **lazy.nvim** | Gerenciador de plugins |
-| **catppuccin** | Tema (mocha) |
-| **nvim-lspconfig** | Configuração LSP |
-| **mason.nvim** | Instalador de LSP servers |
-| **telescope.nvim** | Fuzzy finder |
-| **nvim-treesitter** | Syntax highlighting avançado |
-| **neo-tree.nvim** | File explorer |
-| **lualine.nvim** | Status line |
-| **toggleterm.nvim** | Terminal integrado |
-| **markdown-preview.nvim** | Preview de markdown |
-| **nvim-web-devicons** | Ícones |
-| **nvim-cmp** | Autocompletion engine |
-| **LuaSnip** | Snippet engine |
-| **friendly-snippets** | Coleção de snippets |
-| **none-ls.nvim** | Formatação e linting (null-ls) |
-| **nvim-autopairs** | Auto fecha parênteses, colchetes, etc |
-| **nvim-ts-autotag** | Auto fecha e renomeia tags HTML/JSX |
+| Plugin                      | Descrição                                |
+| --------------------------- | ---------------------------------------- |
+| **lazy.nvim**               | Gerenciador de plugins                   |
+| **catppuccin**              | Tema (mocha)                             |
+| **nvim-lspconfig**          | Configuração LSP                         |
+| **mason.nvim**              | Instalador de LSP servers                |
+| **telescope.nvim**          | Fuzzy finder                             |
+| **nvim-treesitter**         | Syntax highlighting avançado             |
+| **neo-tree.nvim**           | File explorer                            |
+| **lualine.nvim**            | Status line                              |
+| **toggleterm.nvim**         | Terminal integrado                       |
+| **markdown-preview.nvim**   | Preview de markdown                      |
+| **nvim-web-devicons**       | Ícones                                   |
+| **nvim-cmp**                | Autocompletion engine                    |
+| **LuaSnip**                 | Snippet engine                           |
+| **friendly-snippets**       | Coleção de snippets                      |
+| **none-ls.nvim**            | Formatação e linting (null-ls)           |
+| **nvim-autopairs**          | Auto fecha parênteses, colchetes, etc    |
+| **nvim-ts-autotag**         | Auto fecha e renomeia tags HTML/JSX      |
 | **rainbow-delimiters.nvim** | Colore delimitadores em cores diferentes |
-| **alpha-nvim** | Dashboard/tela inicial customizada |
+| **alpha-nvim**              | Dashboard/tela inicial customizada       |
 
 ## Keymaps
 
@@ -80,43 +80,43 @@ Leader: `<Space>`
 
 ### Geral
 
-| Keymap | Ação |
-|--------|------|
-| `<Esc>` | Limpa highlight da busca |
-| `<C-t>` | Nova tab |
-| `<C-n>` | Toggle Neo-tree (file explorer) |
-| `<leader>J` | Toggle terminal |
+| Keymap      | Ação                            |
+| ----------- | ------------------------------- |
+| `<Esc>`     | Limpa highlight da busca        |
+| `<C-t>`     | Nova tab                        |
+| `<C-n>`     | Toggle Neo-tree (file explorer) |
+| `<leader>J` | Toggle terminal                 |
 
 ### Telescope
 
-| Keymap | Ação |
-|--------|------|
-| `<C-p>` | Buscar arquivos |
+| Keymap       | Ação                          |
+| ------------ | ----------------------------- |
+| `<C-p>`      | Buscar arquivos               |
 | `<leader>fg` | Live grep (busca em arquivos) |
 
 ### LSP
 
-| Keymap | Ação |
-|--------|------|
-| `K` | Hover (documentação) |
-| `gd` | Go to definition |
-| `<leader>ca` | Code action |
+| Keymap       | Ação                     |
+| ------------ | ------------------------ |
+| `K`          | Hover (documentação)     |
+| `gd`         | Go to definition         |
+| `<leader>ca` | Code action              |
 | `<leader>gf` | Formatar código (manual) |
 
 ### Autocompletion (nvim-cmp)
 
-| Keymap | Ação |
-|--------|------|
-| `<C-Space>` | Aciona autocompletion |
-| `<C-b>` | Scroll docs para cima |
-| `<C-f>` | Scroll docs para baixo |
-| `<C-e>` | Aborta/fecha completion |
-| `<CR>` | Confirma item selecionado |
+| Keymap      | Ação                      |
+| ----------- | ------------------------- |
+| `<C-Space>` | Aciona autocompletion     |
+| `<C-b>`     | Scroll docs para cima     |
+| `<C-f>`     | Scroll docs para baixo    |
+| `<C-e>`     | Aborta/fecha completion   |
+| `<CR>`      | Confirma item selecionado |
 
 ### Markdown
 
-| Keymap | Ação |
-|--------|------|
+| Keymap       | Ação           |
+| ------------ | -------------- |
 | `<leader>mp` | Toggle preview |
 
 ## LSP Servers Configurados
@@ -138,17 +138,21 @@ Leader: `<Space>`
 ## Formatação e Linting (none-ls)
 
 ### Formatadores
+
 - **Lua** - stylua
 - **JavaScript/TypeScript/JSX/TSX** - prettier (aspas duplas, ponto e vírgula, vírgulas ES5)
 - **Python** - black
 - **JSON/CSS/HTML/YAML/Markdown** - prettier
 
 ### Linters
+
 - **JavaScript/TypeScript** - eslint_d
 - **Semgrep** - análise estática de segurança
 
 ### Auto-formatação
+
 Formatação automática ao salvar ativa para:
+
 - `*.js`, `*.ts`, `*.jsx`, `*.tsx`
 - `*.json`, `*.css`, `*.html`
 - `*.yaml`, `*.yml`, `*.md`
@@ -162,3 +166,10 @@ Formatação automática ao salvar ativa para:
 - **Spell check**: markdown, text, gitcommit, tex (pt-BR + en)
 - **Auto-indent**: smartindent ativo
 - **Line wrap**: quebra em palavras inteiras com breakindent
+
+### Comentário do Autor
+
+> Esse projeto foi bem legal, principalmente seguindo o guia e dicas do TypeCraft.  
+> Sinta-se a vontade para fazer um fork e brincar com suas configurações.  
+> Uma última coisa  
+> I USE ARCH BTW
