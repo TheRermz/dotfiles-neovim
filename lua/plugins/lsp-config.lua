@@ -77,7 +77,11 @@ return {
 				capabilities = capabilities,
 				settings = {
 					ltex = {
-						language = { "pt-BR", "en-US" },
+						language = "pt-BR, en-US",
+						additionalRules = {
+							enablePickyRules = true,
+							motherTongue = "pt-BR",
+						},
 						enabled = { "markdown", "tex", "latex", "text" },
 						dictionary = {
 							["pt-BR"] = { "neovim", "treesitter", "lspconfig" },

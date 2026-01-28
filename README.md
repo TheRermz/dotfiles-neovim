@@ -2,6 +2,21 @@
 
 Minha configuração pessoal do Neovim, ainda em desenvolvimento.
 
+## Features
+
+- Dashboard customizado com ASCII art
+- LSP completo com autocompletion e snippets
+- Formatação automática ao salvar
+- Syntax highlighting avançado com Treesitter
+- Rainbow delimiters (parênteses coloridos)
+- Auto-close para parênteses e tags HTML/JSX
+- File explorer (Neo-tree) e fuzzy finder (Telescope)
+- Terminal integrado
+- Preview de Markdown
+- Spell check em PT-BR e EN
+- Tema Catppuccin Mocha
+- Status line customizada (Lualine)
+
 ## Tutorial de Referência
 
 Seguindo a série **Neovim for Newbs** do TypeCraft:
@@ -25,7 +40,13 @@ Seguindo a série **Neovim for Newbs** do TypeCraft:
 │       ├── treesitter.lua      # Syntax highlighting
 │       ├── lualine.lua         # Status line
 │       ├── toggleterm.lua      # Terminal integrado
-│       └── markdown-preview.lua
+│       ├── markdown-preview.lua
+│       ├── completions.lua     # Autocompletion (nvim-cmp + LuaSnip)
+│       ├── none-ls.lua         # Formatação e linting
+│       ├── autopairs.lua       # Auto fecha parênteses
+│       ├── autoclose-tag.lua   # Auto fecha tags HTML/JSX
+│       ├── rainbow-delimiters.lua # Colore delimitadores
+│       └── alpha-nvim.lua      # Dashboard inicial
 └── lazy-lock.json
 ```
 
@@ -44,6 +65,14 @@ Seguindo a série **Neovim for Newbs** do TypeCraft:
 | **toggleterm.nvim** | Terminal integrado |
 | **markdown-preview.nvim** | Preview de markdown |
 | **nvim-web-devicons** | Ícones |
+| **nvim-cmp** | Autocompletion engine |
+| **LuaSnip** | Snippet engine |
+| **friendly-snippets** | Coleção de snippets |
+| **none-ls.nvim** | Formatação e linting (null-ls) |
+| **nvim-autopairs** | Auto fecha parênteses, colchetes, etc |
+| **nvim-ts-autotag** | Auto fecha e renomeia tags HTML/JSX |
+| **rainbow-delimiters.nvim** | Colore delimitadores em cores diferentes |
+| **alpha-nvim** | Dashboard/tela inicial customizada |
 
 ## Keymaps
 
@@ -72,6 +101,17 @@ Leader: `<Space>`
 | `K` | Hover (documentação) |
 | `gd` | Go to definition |
 | `<leader>ca` | Code action |
+| `<leader>gf` | Formatar código (manual) |
+
+### Autocompletion (nvim-cmp)
+
+| Keymap | Ação |
+|--------|------|
+| `<C-Space>` | Aciona autocompletion |
+| `<C-b>` | Scroll docs para cima |
+| `<C-f>` | Scroll docs para baixo |
+| `<C-e>` | Aborta/fecha completion |
+| `<CR>` | Confirma item selecionado |
 
 ### Markdown
 
@@ -90,15 +130,35 @@ Leader: `<Space>`
 - **HTML/CSS** - html, cssls, cssmodules_ls
 - **JSON** - jsonls
 - **YAML** - yamlls
-    - **Docker** - dockerls, docker_compose_language_service
+- **Docker** - dockerls, docker_compose_language_service
 - **LaTeX** - texlab, ltex (com pt-BR)
-    - **Markdown** - marksman, markdown_oxide
-    - **GitHub Actions** - gh_actions_ls
+- **Markdown** - marksman, markdown_oxide
+- **GitHub Actions** - gh_actions_ls
+
+## Formatação e Linting (none-ls)
+
+### Formatadores
+- **Lua** - stylua
+- **JavaScript/TypeScript/JSX/TSX** - prettier (aspas duplas, ponto e vírgula, vírgulas ES5)
+- **Python** - black
+- **JSON/CSS/HTML/YAML/Markdown** - prettier
+
+### Linters
+- **JavaScript/TypeScript** - eslint_d
+- **Semgrep** - análise estática de segurança
+
+### Auto-formatação
+Formatação automática ao salvar ativa para:
+- `*.js`, `*.ts`, `*.jsx`, `*.tsx`
+- `*.json`, `*.css`, `*.html`
+- `*.yaml`, `*.yml`, `*.md`
+- `*.lua`, `*.tex`
 
 ## Opções
 
-    - Tabs: 2 espaços
-    - Line numbers: absoluto + relativo
-- Cursor line highlight (#CCFF00)
-    - Spell check: markdown, text, gitcommit, tex (pt-BR + en)
-    - Auto-indent on save
+- **Tabs**: 2 espaços
+- **Line numbers**: absoluto + relativo
+- **Cursor line highlight**: #CCFF00
+- **Spell check**: markdown, text, gitcommit, tex (pt-BR + en)
+- **Auto-indent**: smartindent ativo
+- **Line wrap**: quebra em palavras inteiras com breakindent
