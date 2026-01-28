@@ -113,6 +113,11 @@ return {
 			vim.keymap.set("n", "K", vim.lsp.buf.hover, {})
 			vim.keymap.set("n", "gd", vim.lsp.buf.definition, {})
 			vim.keymap.set("n", "<leader>ca", vim.lsp.buf.code_action, {})
+			vim.keymap.set("n", "gr", vim.lsp.buf.references, {})
+			vim.keymap.set("n", "gD", vim.lsp.buf.declaration, {}) -- vai pra declaração
+			vim.keymap.set("n", "gi", vim.lsp.buf.implementation, {}) -- vai pra implementação
+			vim.keymap.set("n", "<leader>rn", vim.lsp.buf.rename, {}) -- renomeia (tipo F2 no Rider)
+			vim.keymap.set("n", "<leader>D", vim.lsp.buf.type_definition, {}) -- vai pra definição do tipo
 		end,
 	},
 }
