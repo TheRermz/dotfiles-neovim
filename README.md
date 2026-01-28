@@ -102,6 +102,11 @@ Leader: `<Space>`
 | `gd`         | Go to definition         |
 | `<leader>ca` | Code action              |
 | `<leader>gf` | Formatar código (manual) |
+| `gr`         | Go to references         |
+| `gD`         | Go to declaration        |
+| `gi`         | Go to implementation     |
+| `<leader>rn` | Rename symbol            |
+| `<leader>D`  | Go to type definition    |
 
 ### Autocompletion (nvim-cmp)
 
