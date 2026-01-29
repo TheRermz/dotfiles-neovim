@@ -14,6 +14,7 @@ vim.keymap.set("n", "<Esc>", ":noh<CR>", { silent = true }) -- Esc limpa highlig
 vim.keymap.set("n", "<C-t>", ":tabnew <CR>", {}) -- Abre uma nova aba vazia
 vim.keymap.set("n", "<leader>J", ":ToggleTerm <CR>", {})
 vim.keymap.set({ "n", "i" }, "<C-s>", "<Esc>:w<CR>", { noremap = true }) -- Ctrl - S Salva
+vim.keymap.set("v", "<C-c>", '"+y<CR>', { noremap = true })
 
 -- Ativa spell check apenas em markdown, texto e git commits
 vim.api.nvim_create_autocmd("FileType", {
