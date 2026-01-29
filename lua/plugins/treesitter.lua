@@ -38,7 +38,7 @@ return {
 				"javascript",
 				"typescript",
 				"lua",
-				"c_sharp",
+				"cs",
 				"markdown",
 				"tex",
 				"nginx",

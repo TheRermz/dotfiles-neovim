@@ -1,4 +1,4 @@
-#9 Configuração Neovim
+# Configuração Neovim
 
 Minha configuração pessoal do Neovim, ainda em desenvolvimento.
 
