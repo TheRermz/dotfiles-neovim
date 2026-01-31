@@ -161,7 +161,7 @@ Formatação automática ao salvar ativa para:
 - `*.js`, `*.ts`, `*.jsx`, `*.tsx`
 - `*.json`, `*.css`, `*.html`
 - `*.yaml`, `*.yml`, `*.md`
-- `*.lua`, `*.tex`
+- `*.lua`, `*.tex`, `*.cs`
 
 ## Opções
 
