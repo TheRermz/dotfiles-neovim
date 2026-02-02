@@ -118,6 +118,7 @@ return {
 			vim.keymap.set("n", "gi", vim.lsp.buf.implementation, {}) -- vai pra implementação
 			vim.keymap.set("n", "<leader>rn", vim.lsp.buf.rename, {}) -- renomeia (tipo F2 no Rider)
 			vim.keymap.set("n", "<leader>D", vim.lsp.buf.type_definition, {}) -- vai pra definição do tipo
+			vim.keymap.set("n", "<leader>e", vim.diagnostic.open_float, {})
 		end,
 	},
 }
